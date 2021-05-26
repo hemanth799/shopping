@@ -473,6 +473,13 @@
       "price": "658",
       "img": "68.jpg",
       "id": 4
+    },
+    {
+      "title": "dsfadsfadsfdsf",
+      "type": "Appliances",
+      "price": "5656",
+      "img": "NewCSS.jpg",
+      "id": 5
     }
   ],
   "books": [
