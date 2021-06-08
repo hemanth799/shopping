@@ -475,11 +475,39 @@
       "id": 4
     },
     {
-      "title": "dsfadsfadsfdsf",
+      "id": 5,
+      "title": "Wall Clock",
       "type": "Appliances",
-      "price": "5656",
+      "price": "22222",
+      "img": "Screenshot_2.png"
+    },
+    {
+      "id": 6,
+      "title": "Dining Table",
+      "type": "Appliances",
+      "price": "95187",
+      "img": "Screenshot_1.png"
+    },
+    {
+      "id": 7,
+      "title": "Devotional Idols",
+      "type": "Appliances",
+      "price": "9999",
+      "img": "NewCSS.jpg"
+    },
+    {
+      "title": "Pen Stand",
+      "type": "Appliances",
+      "price": "878459",
       "img": "NewCSS.jpg",
-      "id": 5
+      "id": 8
+    },
+    {
+      "title": "Photo Frames",
+      "type": "Appliances",
+      "price": "919191",
+      "img": "Screenshot_2.png",
+      "id": 9
     }
   ],
   "books": [

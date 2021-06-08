@@ -152,6 +152,7 @@ class AdminBody extends Component {
                     }
                 })
                 this.allData();
+                this.resetForm();
             }).catch((err) => {
                 console.log('Error in add action');
             })
@@ -194,8 +195,9 @@ class AdminBody extends Component {
     }
 
     edit = (item) => {
-        let typeValue = item.type;
+        // let typeValue = item.type;
         console.log(item.img);
+        console.log(item.id);
 
         this.setState({
             title: item.title,
@@ -205,6 +207,10 @@ class AdminBody extends Component {
             id: item.id,
             enable: false
         })
+    }
+
+    editSubmit = (e) => {
+        e.preventDefault();
 
         let data = {
             id: this.state.id,
@@ -213,12 +219,15 @@ class AdminBody extends Component {
             price: this.state.price,
             img: this.state.img
         }
-        console.log(data.id);
-
-        // axios.put(`http://localhost:5555/${typeValue}/${item.id}`, data)
-        //     .then(response => {
-        //         console.log(response);
-        //     })
+        axios.put(`http://localhost:5555/${data.type}/${data.id}`, data)
+            .then(response => {
+                console.log(response);
+            });
+        this.allData();
+        this.resetForm();
+        this.setState({
+            enable: true
+        })
     }
 
     render() {
@@ -264,7 +273,7 @@ class AdminBody extends Component {
                                                 Submit
                                             </Button>
                                             :
-                                            <Button md={6} variant="info" type="button" onClick={this.edit}>
+                                            <Button md={6} variant="info" type="button" onClick={this.editSubmit}>
                                                 Save
                                             </Button>
                                     }
